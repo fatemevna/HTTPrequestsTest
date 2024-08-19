@@ -1,0 +1,7 @@
+C:\Users\mohajer\source\repos\Api\Api\bin\Debug\Api.exe.config
+C:\Users\mohajer\source\repos\Api\Api\bin\Debug\Api.exe
+C:\Users\mohajer\source\repos\Api\Api\bin\Debug\Api.pdb
+C:\Users\mohajer\source\repos\Api\Api\obj\Debug\Api.csproj.AssemblyReference.cache
+C:\Users\mohajer\source\repos\Api\Api\obj\Debug\Api.csproj.CoreCompileInputs.cache
+C:\Users\mohajer\source\repos\Api\Api\obj\Debug\Api.exe
+C:\Users\mohajer\source\repos\Api\Api\obj\Debug\Api.pdb
