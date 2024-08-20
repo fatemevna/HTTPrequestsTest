@@ -18,37 +18,37 @@ namespace ConsoleApp3
                 using (HttpClient client = new HttpClient())
                 {
                     client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com");
-                    if (number == "1")
-                    {
+                    switch (number) {
+                        case "1":
                         for (int i = 1; i < 11; i++)
                         {
-                            HttpResponseMessage response = await client.GetAsync($"/posts/{i}");
-                            if (response.IsSuccessStatusCode)
+                            HttpResponseMessage response1 = await client.GetAsync($"/posts/{i}");
+                            if (response1.IsSuccessStatusCode)
                             {
-                                string responseBody = await response.Content.ReadAsStringAsync();
+                                string responseBody = await response1.Content.ReadAsStringAsync();
                                 Console.WriteLine(responseBody);
                             }
                             else
                             {
-                                Console.WriteLine($"Error: {response.StatusCode}");
+                                Console.WriteLine($"Error: {response1.StatusCode}");
                             }
                         }
-                    }
-                    else if (number == "2")
-                    {
-                        HttpResponseMessage response = await client.GetAsync("/posts/2/comments");
-                        if (response.IsSuccessStatusCode)
+                            break;
+                        case "2":
+                    
+                            HttpResponseMessage response2 = await client.GetAsync("/posts/2/comments");
+                        if (response2.IsSuccessStatusCode)
                         {
-                            string responseBody = await response.Content.ReadAsStringAsync();
+                            string responseBody = await response2.Content.ReadAsStringAsync();
                             Console.WriteLine(responseBody);
                         }
                         else
                         {
-                            Console.WriteLine($"Error: {response.StatusCode}");
+                            Console.WriteLine($"Error: {response2.StatusCode}");
                         }
-                    }
-                    else if (number == "3")
-                    {
+                            break;
+                        case "3":
+                    
                         for (int i = 1; i < 11; i++)
                         {
                             HttpResponseMessage response = await client.GetAsync($"/albums/{i}");
@@ -62,15 +62,14 @@ namespace ConsoleApp3
                                 Console.WriteLine($"Error: {response.StatusCode}");
                             }
                         }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Enter a number between 1 and 3:");
-                    }
+                            break;
+                    
+                    } 
+                
 
 
                 }
-            } while (!(number == "0"));
+            } while (! (number == "0"));
         }
     }
 }
